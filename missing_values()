@@ -3,5 +3,5 @@ def missing_values(dataframe):
     cols_with_missing = [col for col in dataframe.columns
                             if dataframe[col].isnull().any()]
     for i in cols_with_missing:
-        d[i] = df[i].isnull().sum()
+        d[i] = dataframe[i].isnull().sum()
     return d
